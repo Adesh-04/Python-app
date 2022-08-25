@@ -1,0 +1,17 @@
+display: Done(D)
+move:       |  |    -  |Nmove|  |Capture|  |Check|  |disambiguity|
+            pawn:                  D                     
+            Rook:                                       
+            Knight:
+            Bishop:
+            King:
+            Queen:
+
+en-passant: 
+Promotion: 
+
+
+Castle:
+Checkmate:
+Resign:
+Draw:

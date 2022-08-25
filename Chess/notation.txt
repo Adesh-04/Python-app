@@ -1,0 +1,51 @@
+file : a,b,c,->,h
+Rank : 1,2,3,->,8
+pieces: [ N : Knight], [ Q : Queen], [ R : Rook], [ B : Bishop], [ K : King]
+
+
+Captures:
+    contains 'x' in the notation
+        eg. Bxe5: Bishop takes piece at e5
+        eg. bxe5: pawn from b file took piece from e5 or bxe
+        eg. fxe6: pawn from f file took from e5 with en passant and landed on e6
+
+    disambiguous capture:
+        eg. Rdxe2: Rook from d file took e2 piece
+        eg. N3xe2: Knight from 3rd rank took e2 piece
+        eg. Qd2xh2: Queen from d file and 2nd rank took h2 piece 
+
+moves:
+    no 'x' or '+'
+        eg. Ne5 : Knight moved to e5
+        eg. e3 : pawn moved to e3
+
+    disambiguous moves:
+        eg. Rde5: Rook from d file moved to e5
+        eg. Q3h5: Queen from 3rd rank moved to h5
+        eg. Nd3e5: Knight from d file and 3rd rankcmoved to e5
+
+Castling:
+    contains 'o or -' in the notation
+    0-0 : o-o : O-O : for short castle
+    0-0-0 : o-o-o : O-O-O : for Long castle
+
+Check:
+    contains '+' in the notation
+        eg. Rd4+: Rook moved to d4 and checked the king
+    disambiguous check:
+        eg. Rde3+: Rook from d file checked
+        eg. N3e2+: Knight from 3rd rank checked
+        eg. Qd2h2+: Queen from d file and 2nd rank checked
+
+Checkmate:
+    contains '#' in the notation
+        eg. Ne5#: Knight moved to e5 and checkmated the other king
+    disambiguous mate:
+        eg. Rde2#: Rook from d file mated
+        eg. N3e2#: Knight from 3rd rank mated
+        eg. Qdxh2#: Queen from d file and 2nd rank mated
+
+Promotion:
+    contains '=' in the notation
+        eg. e8=Q: e8 pawn promoted to Queen
+        eg. a1=N: a1 pawn promoted to Knight
