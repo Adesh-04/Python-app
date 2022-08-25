@@ -2,10 +2,14 @@ import random
 
 def display(board):
     ## To Display the board
+    val = 0
     for ele in board:
+        val+=1
         print('',end='\n')
         for i in ele:
             print('| {val} |'.format(val = str(i)),end='')
+        print('  {}'.format(val),end='')
+
 
 def board(num):
     ## Returns the board
@@ -88,8 +92,11 @@ def take_input():
 
 def check(board,inData,val,win_condition):
     ## Reduced by 1 becoz of index 0
-    x = val[0] - 1
-    y = val[1] - 1
+    try:
+        x = val[0] - 1
+        y = val[1] - 1
+    except:
+        return inData,False
 
     ## Checking for Mine
     if board[x][y] == 'X':
@@ -107,7 +114,7 @@ def check(board,inData,val,win_condition):
 
 if __name__ == '__main__':
     win_condition = []  ## Keeps the Record of Indexes of Safe and Counted Places
-    num = 5            ## Dimension
+    num = 10            ## Dimension
     win = board(num)    
     inData = dummy(num)
     win = put_mines(win,num)
