@@ -56,6 +56,13 @@ class Chess:
         self.board[1][4],self.board[1][5] = 'WK','WQ'
         self.board[8][4],self.board[8][5] = 'BK','BQ'
 
+    def play(self):
+        while True:
+            self.display()
+            ch = self.take_input()
+            if ch == -1:
+                break
+
     def display(self):
         print('\n\t   *** Black Side ***')
         for i in range(8,0,-1):
@@ -109,10 +116,6 @@ if __name__ == '__main__':
 
     obj = Chess()
     obj.putPieces()
-    while True:
-        obj.display()
-        ch = obj.take_input()
-        if ch == -1:
-            break
+    obj.play()
 
 
